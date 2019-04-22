@@ -120,7 +120,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             IntegerExtractor = Number.English.IntegerExtractor.GetInstance();
             OrdinalExtractor = Number.English.OrdinalExtractor.GetInstance();
 
-            NumberParser = new BaseNumberParser(new EnglishNumberParserConfiguration());
+            NumberParser = new BaseNumberParser(new BulgarianNumberParserConfiguration());
             DurationExtractor = new BaseDurationExtractor(new EnglishDurationExtractorConfiguration(this));
             UtilityConfiguration = new EnglishDatetimeUtilityConfiguration();
 

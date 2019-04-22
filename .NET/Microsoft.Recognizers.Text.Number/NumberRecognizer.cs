@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Recognizers.Text.Number.Bulgarian;
 using Microsoft.Recognizers.Text.Number.Chinese;
 using Microsoft.Recognizers.Text.Number.Dutch;
 using Microsoft.Recognizers.Text.Number.English;
@@ -282,6 +283,30 @@ namespace Microsoft.Recognizers.Text.Number
                     new BaseNumberRangeParser(new DutchNumberRangeParserConfiguration()),
                     new Dutch.NumberRangeExtractor(options)));
             */
+
+            RegisterModel<NumberModel>(
+                Culture.Bulgarian,
+                options => new NumberModel(
+                    AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Number, new BulgarianNumberParserConfiguration(options)),
+                    Bulgarian.MergedNumberExtractor.GetInstance(NumberMode.PureNumber, options)));
+
+            RegisterModel<OrdinalModel>(
+                Culture.Bulgarian,
+                options => new OrdinalModel(
+                    AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Ordinal, new BulgarianNumberParserConfiguration(options)),
+                    Bulgarian.OrdinalExtractor.GetInstance(options)));
+
+            RegisterModel<PercentModel>(
+                Culture.Bulgarian,
+                options => new PercentModel(
+                    AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Percentage, new BulgarianNumberParserConfiguration(options)),
+                    new Bulgarian.PercentageExtractor(options)));
+
+            RegisterModel<NumberRangeModel>(
+                Culture.Bulgarian,
+                options => new NumberRangeModel(
+                    new BaseNumberRangeParser(new BulgarianNumberRangeParserConfiguration()),
+                    new Bulgarian.NumberRangeExtractor(options)));
         }
 
         private static List<ModelResult> RecognizeByModel(Func<NumberRecognizer, IModel> getModelFunc, string query, NumberOptions options)

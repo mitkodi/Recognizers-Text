@@ -238,7 +238,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             CardinalExtractor = Number.English.CardinalExtractor.GetInstance();
             OrdinalExtractor = Number.English.OrdinalExtractor.GetInstance();
             DurationExtractor = new BaseDurationExtractor(new EnglishDurationExtractorConfiguration(this));
-            NumberParser = new BaseNumberParser(new EnglishNumberParserConfiguration());
+            NumberParser = new BaseNumberParser(new BulgarianNumberParserConfiguration());
         }
 
         public IDateExtractor DatePointExtractor { get; }

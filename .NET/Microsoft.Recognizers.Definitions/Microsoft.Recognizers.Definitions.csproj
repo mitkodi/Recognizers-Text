@@ -41,6 +41,7 @@
     <Compile Include="..\Microsoft.Recognizers.Definitions.Common\BasePhoneNumbers.cs" Link="BasePhoneNumbers.cs" />
     <Compile Include="..\Microsoft.Recognizers.Definitions.Common\BaseUnits.cs" Link="BaseUnits.cs" />
     <Compile Include="..\Microsoft.Recognizers.Definitions.Common\BaseURL.cs" Link="BaseURL.cs" />
+    <Compile Include="..\Microsoft.Recognizers.Definitions.Common\Bulgarian\NumbersDefinitions.cs" Link="Bulgarian\NumbersDefinitions.cs" />    
     <Compile Include="..\Microsoft.Recognizers.Definitions.Common\Chinese\ChoiceDefinitions.cs" Link="Chinese\ChoiceDefinitions.cs" />
     <Compile Include="..\Microsoft.Recognizers.Definitions.Common\Chinese\DateTimeDefinitions.cs" Link="Chinese\DateTimeDefinitions.cs" />
     <Compile Include="..\Microsoft.Recognizers.Definitions.Common\Chinese\NumbersDefinitions.cs" Link="Chinese\NumbersDefinitions.cs" />
@@ -105,6 +106,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
 </Project>

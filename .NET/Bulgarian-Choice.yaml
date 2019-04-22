@@ -1,0 +1,9 @@
+﻿---
+LangMarker: Bul
+#Boolean Recognizers
+TokenizerRegex: !simpleRegex
+  def: '[^\w\d]'
+TrueRegex: !simpleRegex
+  def: \b((?<!не\s+е\s+)в(я|е)рно|да|йеп|д|определено|ok|ок|(?<!не\s+съм\s+)съгласен)\b|(\uD83D\uDC4D|\uD83D\uDC4C)
+FalseRegex: !simpleRegex
+  def: \b(не(\s+е\s+)?в(я|е)рно|не\+е\s+ок|не\s+съм\+съгласен|не)\b|(\uD83D\uDC4E|\u270B|\uD83D\uDD90)
